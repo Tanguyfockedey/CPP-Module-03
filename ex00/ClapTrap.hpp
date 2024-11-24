@@ -6,10 +6,11 @@
 /*   By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:55:00 by tafocked          #+#    #+#             */
-/*   Updated: 2024/11/22 15:59:26 by tafocked         ###   ########.fr       */
+/*   Updated: 2024/11/24 16:34:39 by tafocked         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include <iostream>
 #include <string>
 
@@ -22,6 +23,7 @@ class ClapTrap
 		int			damage;
 	
 	public:
+		ClapTrap();
 		ClapTrap(const std::string name);
 		ClapTrap(const ClapTrap &copy);
 		ClapTrap &operator=(const ClapTrap &copy);
