@@ -6,14 +6,16 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/20 16:37:10 by tafocked          #+#    #+#              #
-#    Updated: 2024/11/26 17:47:45 by tafocked         ###   ########.fr        #
+#    Updated: 2024/11/26 20:26:36 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= ClapTrap
+NAME	= FragTrap
 
 FILES	= main.cpp \
 			ClapTrap.cpp \
+			ScavTrap.cpp \
+			FragTrap.cpp \
 
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic -g3

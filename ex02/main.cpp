@@ -6,33 +6,33 @@
 /*   By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:54:31 by tafocked          #+#    #+#             */
-/*   Updated: 2024/11/26 20:11:54 by tafocked         ###   ########.fr       */
+/*   Updated: 2024/11/26 20:42:11 by tafocked         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
-	ClapTrap test;
-	ClapTrap Alice("Alice");
-	ClapTrap Bob = ClapTrap("Bob");
+	FragTrap test;
+	FragTrap Alice("Alice");
+	FragTrap Bob("Bob");
+	ScavTrap Cecile("Cecile");
+	ClapTrap Bob2 = Bob;
+	FragTrap Bob3 = Bob;
 	std::cout << std::endl;
 
-	for (int i = 0; i < 5; i++)
-		Alice.attack("Bob");
-	Bob.takeDamage(10);
+	Alice.attack("Barrel");
+	Bob.takeDamage(100);
 	Bob.beRepaired(1);
 	std::cout << std::endl;
 
-	ClapTrap Alice2(Alice);
-	ClapTrap Alice3;
-	Alice3 = Alice2;
+	Cecile.guardGate();
+	Cecile.guardGate();
 	std::cout << std::endl;
 
-	for (int i = 0; i < 6; i++)
-		Alice2.attack("Bob");
-	Alice3.beRepaired(3);
-
+	Alice.highFivesGuys();
+	Bob.highFivesGuys();
 	std::cout << std::endl;
 }

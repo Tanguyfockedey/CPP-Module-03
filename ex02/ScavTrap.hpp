@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 15:54:31 by tafocked          #+#    #+#             */
-/*   Updated: 2024/11/26 20:11:54 by tafocked         ###   ########.fr       */
+/*   Created: 2024/11/26 15:43:50 by tafocked          #+#    #+#             */
+/*   Updated: 2024/11/26 20:02:39 by tafocked         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include "ClapTrap.hpp"
 
-int main(void)
+class ScavTrap: public ClapTrap
 {
-	ClapTrap test;
-	ClapTrap Alice("Alice");
-	ClapTrap Bob = ClapTrap("Bob");
-	std::cout << std::endl;
+	public:
+		/* constructors */
+		ScavTrap();
+		ScavTrap(const std::string name);
+		ScavTrap(const ScavTrap &copy);
+		/* destructor */
+		~ScavTrap();
+		/* operator overload*/
+		ScavTrap &operator=(const ScavTrap &copy);
 
-	for (int i = 0; i < 5; i++)
-		Alice.attack("Bob");
-	Bob.takeDamage(10);
-	Bob.beRepaired(1);
-	std::cout << std::endl;
+		void	attack(const std::string &target);
+		void	guardGate(void);
 
-	ClapTrap Alice2(Alice);
-	ClapTrap Alice3;
-	Alice3 = Alice2;
-	std::cout << std::endl;
-
-	for (int i = 0; i < 6; i++)
-		Alice2.attack("Bob");
-	Alice3.beRepaired(3);
-
-	std::cout << std::endl;
-}
+	private:
+		bool	guarding;
+};
