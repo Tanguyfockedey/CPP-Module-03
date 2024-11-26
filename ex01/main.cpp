@@ -6,7 +6,7 @@
 /*   By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:54:31 by tafocked          #+#    #+#             */
-/*   Updated: 2024/11/26 19:56:01 by tafocked         ###   ########.fr       */
+/*   Updated: 2024/11/26 20:03:44 by tafocked         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ int main(void)
 
 	Bob.beRepaired(3);
 	Bob2.beRepaired(3);
+	Bob2 = Alice;
+	Bob2.beRepaired(50);
 
 	std::cout << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 15:43:50 by tafocked          #+#    #+#             */
-/*   Updated: 2024/11/26 17:49:57 by tafocked         ###   ########.fr       */
+/*   Updated: 2024/11/26 20:02:39 by tafocked         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class ScavTrap: public ClapTrap
 
 		void	attack(const std::string &target);
 		void	guardGate(void);
+
 	private:
 		bool	guarding;
 };
